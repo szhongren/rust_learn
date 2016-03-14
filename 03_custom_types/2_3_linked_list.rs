@@ -1,6 +1,7 @@
 // common use for enums is to create a linked list
 use List::{ Cons, Nil };
 
+#[derive(Debug)]
 enum List {
     // Cons: tuple struct that wraps an element and a pointer to the next node
     // Box<type> means that the type is heap allocated and not stack allocated, and is a smart pointer to a heap of the type
@@ -11,7 +12,7 @@ enum List {
     Nil,
 }
 
-// methods con be attached to an enum (or struct) like class methods
+// methods con be attached to an enum (or struct) like class methods with impl
 impl List {
     // create an empty list
     fn new() -> List {
@@ -40,7 +41,7 @@ impl List {
         match *self {
             Cons(head, ref tail) => {
                 // format! is similar to print!, but returns a heap allocated string instead of printing to the console
-                format!("{}, {}", head, tail.stringify());
+                format!("{}, {}", head, tail.stringify()) // returns a formatted string
             },
             Nil => {
                 format!("Nil")
@@ -50,5 +51,16 @@ impl List {
 }
 
 fn main() {
+    // create an empty linked list, that has to be mutable because we are prepending
+    let mut list = List::new();
 
+    // append some elements
+    list = list.prepend(1);
+    list = list.prepend(2);
+    list = list.prepend(3);
+
+    // show the final state of the list
+    println!("linked list has length: {}", list.len());
+    println!("{}", list.stringify());
+    println!("{:?}", list);
 }

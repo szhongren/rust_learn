@@ -1,7 +1,7 @@
 // hide warnings for unused code
 #![allow(dead_code)]
 
-// enum with implicit discriminator
+// enum with implicit discriminator from 0
 enum Number {
     Zero,
     One,

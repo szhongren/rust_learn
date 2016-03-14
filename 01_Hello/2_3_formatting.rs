@@ -2,6 +2,7 @@
 use std::fmt::{self, Formatter, Display};
 
 struct City {
+    // string with static lifetime
     name: &'static str,
     // Lat
     lat: f32,
@@ -12,7 +13,7 @@ struct City {
 impl Display for City {
     // f is a buffer, this method must write the formatted string into it
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
-        let lat_c = if self.lat >= 0.0 { 'N' } else { 'S' };
+        let lat_c = if self.lat >= 0.0 { 'N' } else { 'S' }; // inline if, similar to ternary operator
         let lon_c = if self.lon >= 0.0 { 'E' } else { 'W' };
 
         // 3 decimal points
@@ -46,7 +47,8 @@ fn main() {
         Color { red: 128, green: 255, blue: 90 },
         Color { red: 0, green: 3, blue: 254 },
         Color { red: 0, green: 0, blue: 0 },
-    ].iter() {
+    ].iter() { // iterates over &T aka the addresses of the items in the above list
+        // do the below, then call next() and do it again
         // Switch this to use {} once you've added an implementation
         // for fmt::Display
         println!("{}", *color)

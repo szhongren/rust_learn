@@ -8,7 +8,7 @@ impl fmt::Display for List {
         // deref self and create a ref to vec via destructuring
         let List(ref vec) = *self;
 
-        // try macro handles all the errors that might be thrown
+        // try! macro handles all the errors that might be thrown
         try!(write!(f, "["));
 
         // iterate over vec in v while enumerating the iteration count in count

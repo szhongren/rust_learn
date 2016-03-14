@@ -1,5 +1,8 @@
 use std::fmt::{Result, Formatter, Display};
 // a tuple is a collection of values of diff types, constructed using parens. can be used to return multiple values as they can hold any number of values
+// tuples declared with ()
+// blocks with {}, which are also for structs and enums
+// arrays with []
 fn reverse(pair: (i32, bool)) -> (bool, i32) {
     // let can bind the members of a tuple to vars
     let (integer, boolean) = pair;
