@@ -32,6 +32,7 @@ impl List {
         match *self {
             // can't take ownership of the tail, because self is borrowed. instead we take a reference to the tail
             Cons(_, ref tail) => 1 + tail.len(), // recursive match
+            // use dot operator for references too, unlike -> in C
             Nil => 0 // return value
         }
     }

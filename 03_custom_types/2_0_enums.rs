@@ -25,6 +25,7 @@ fn inspect(p: Person) {
         Person::Height(i) => println!("Has a height of {}.", i),
         Person::Weight(i) => println!("Has a weight of {}.", i),
         // destructure info into name and height
+        // basically let Person::Info{ name, height } = p
         Person::Info{ name, height } => {
             println!("{} is {} tall!", name, height);
         },

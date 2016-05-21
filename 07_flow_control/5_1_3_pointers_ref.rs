@@ -3,6 +3,7 @@
 // destructuring uses &, ref, and ref mut
 fn main() {
     // let ref reference = 4; is equiv to the below
+    // reference is a smart pointer to the value 4
     let reference = &4;
 
     match reference {
@@ -12,6 +13,7 @@ fn main() {
     }
 
     // to avoid the &, we need to dereference before matching, which is preferred
+    // better to match on a concrete value instead of a reference
     match *reference {
         val => println!("Got a value via dereferencing: {:?}", val),
     }

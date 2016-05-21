@@ -21,7 +21,7 @@ fn main() {
 	println!("{} of {:b} people know binary, the other half don't.", 1, 2);
 
 	// you can right-align text with a specified width. this will output 5 whitespaces and a 1, right aligned (>) while width$ means that it is a var
-	println!("{number:>width$}", number=1, width=6);
+	println!("{number:>width$}", number=1, width=6); // print number, right aligned(>), width of 6
 	// you can also pad numbers with extra 0's, this will output 000001
 	println!("{number:>0width$}", number=1, width=6);
 

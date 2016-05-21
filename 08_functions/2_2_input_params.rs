@@ -8,10 +8,11 @@
 // fn that takes a closure as an arg and calls it, returns nothing or unit value
 fn apply<F>(f: F)
 // closure takes no input and returns nothing, captures by value (or above)
-where F: FnOnce() {
+where F: FnOnce() { // where here just improves readability
 
     f()
 }
+// same as apply<F: FnOnce() -> ()>(f: F)
 
 // fn that takes a closure as an arg and returns an i32
 fn apply_to_3<F>(f: F) -> i32

@@ -2,7 +2,7 @@
 use std::fmt::{self, Formatter, Display};
 
 struct City {
-    // string with static lifetime
+    // string with static lifetime aka for the lifetime of the program
     name: &'static str,
     // Lat
     lat: f32,

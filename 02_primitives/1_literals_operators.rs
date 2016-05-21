@@ -6,7 +6,7 @@ fn main() {
 
     // Integer subtraction
     println!("1 - 2 = {}", 1i32 - 2);
-    // TODO ^ Try changing `1i32` to `1u32` to see why the type is important
+    // TODO: Try changing `1i32` to `1u32` to see why the type is important
 
     // Short-circuiting boolean logic
     println!("true AND false is {}", true && false);

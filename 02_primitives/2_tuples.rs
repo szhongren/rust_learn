@@ -4,6 +4,7 @@ use std::fmt::{Result, Formatter, Display};
 // blocks with {}, which are also for structs and enums
 // arrays with []
 fn reverse(pair: (i32, bool)) -> (bool, i32) {
+    // takes a tuple with i32 and bool, returns it reversed
     // let can bind the members of a tuple to vars
     let (integer, boolean) = pair;
 

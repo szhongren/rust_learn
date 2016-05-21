@@ -16,7 +16,7 @@
 
 // if let is cleaner for this case and allows various failure options to be specified
 fn main() {
-    // all have type Option<i32>
+    // all have type Option<i32> (could be Some(v) or None)
     let number = Some(7);
     let letter: Option<i32> = None;
     let emoticon: Option<i32> = None;

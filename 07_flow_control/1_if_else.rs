@@ -2,8 +2,8 @@
 fn main() {
     let n = 5;
 
-    if n < 0 {
-        print!("{} is negative", n);
+    if n < 0 { // python like
+        print!("{} is negative", n); // each branch needs the curly braces though
     } else if n > 0 {
         print!("{} is positive", n);
     } else {
@@ -18,7 +18,7 @@ fn main() {
         } else {
             println!(", and is a big number. Reduce by 2.");
             n - 2
-        };
+        }; // end of let binding
 
         println!("{} -> {}", n, big_n);
 }

@@ -32,6 +32,7 @@ fn main() {
     // unless it already fits
     println!(" 128 as a i16 is: {}", 128 as i16);
     // 128 as u8 -> 128, whose two's complement in eight bits is:
+    // 128 is 1000_0000 which is the min value of an i8
     println!(" 128 as a i8 is : {}", 128 as i8);
 
     // repeating the example above

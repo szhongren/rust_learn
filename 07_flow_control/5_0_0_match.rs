@@ -8,7 +8,7 @@ fn main() {
         1 => println!("One!"),
         // match several values
         2 | 3 | 5 | 7 | 11 => println!("This is a prime."),
-        // match an inclusive range
+        // match an inclusive range(3 dots instead of 2)
         13...19 => println!("A teen."),
         // handle other cases
         _ => println!("Ain't special."),

@@ -31,6 +31,8 @@ impl fmt::Display for Point2 {
     }
 }
 
+// you can implement fmt::Binary too as another trait
+
 fn main() {
     let minmax = MinMax(0, 14);
 
