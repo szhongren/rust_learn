@@ -15,7 +15,7 @@ fn give_commoner(gift: Option<&str>) {
 // our sheltered princess will panic at the sight of snakes
 fn give_princess(gift: Option<&str>) {
     // using unwrap returns a panic when it receives a None
-    let inside = gift.unwrap();
+    let inside = gift.unwrap(); // moves value out of the Some otherwise
     if inside == "snake" { panic!("AAAAAHHHH!!"); }
 
     println!("I love {}s!", inside);
